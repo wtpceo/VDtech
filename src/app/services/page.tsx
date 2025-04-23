@@ -152,7 +152,7 @@ export default function ServicesPage() {
           </div>
           
           <div className="max-w-4xl mx-auto">
-            {servicesList.map((service, index) => (
+            {servicesList.map((service) => (
               <div key={service.id} className="mb-8 border-b border-gray-200 pb-8 last:border-0">
                 <details className="group">
                   <summary className="flex justify-between items-center font-medium cursor-pointer list-none">
