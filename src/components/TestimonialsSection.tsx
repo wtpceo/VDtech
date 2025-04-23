@@ -35,7 +35,7 @@ export default function TestimonialsSection() {
               ))}
             </div>
             <p className="text-gray-600 mb-4">
-              "조달청 MAS 등록을 위해 VD-Tech에 컨설팅을 의뢰했습니다. 전문적인 지식과 체계적인 프로세스로 짧은 시간 내에 성공적으로 등록을 완료할 수 있었습니다. 덕분에 정부 조달 시장에 진출하여 안정적인 매출을 확보할 수 있게 되었습니다."
+              &quot;조달청 MAS 등록을 위해 VD-Tech에 컨설팅을 의뢰했습니다. 전문적인 지식과 체계적인 프로세스로 짧은 시간 내에 성공적으로 등록을 완료할 수 있었습니다. 덕분에 정부 조달 시장에 진출하여 안정적인 매출을 확보할 수 있게 되었습니다.&quot;
             </p>
             <div className="text-blue-700 font-medium">
               • MAS 등록 성공 및 공공기관 납품 계약 체결
@@ -65,7 +65,7 @@ export default function TestimonialsSection() {
               ))}
             </div>
             <p className="text-gray-600 mb-4">
-              "특허 출원 과정에서 선행기술 조사부터 명세서 작성까지 VD-Tech의 전문가분들의 도움을 받았습니다. 많은 특허 권리를 확보할 수 있었고, 이를 통해 투자 유치에도 큰 도움이 되었습니다. 특히 긴밀한 소통과 전략적인 접근이 인상적이었습니다."
+              &quot;특허 출원 과정에서 선행기술 조사부터 명세서 작성까지 VD-Tech의 전문가분들의 도움을 받았습니다. 많은 특허 권리를 확보할 수 있었고, 이를 통해 투자 유치에도 큰 도움이 되었습니다. 특히 긴밀한 소통과 전략적인 접근이 인상적이었습니다.&quot;
             </p>
             <div className="text-blue-700 font-medium">
               • 3건의 특허 등록 성공 및 시리즈 A 투자 유치
@@ -95,7 +95,7 @@ export default function TestimonialsSection() {
               ))}
             </div>
             <p className="text-gray-600 mb-4">
-              "조달청 우수제품 지정을 목표로 VD-Tech에 컨설팅을 의뢰했습니다. 까다로운 심사 기준과 복잡한 절차에도 불구하고, 전문적인 가이드와 철저한 준비 덕분에 우수제품으로 지정받을 수 있었습니다. 이후 공공 조달 매출이 3배 이상 증가했습니다."
+              &quot;조달청 우수제품 지정을 목표로 VD-Tech에 컨설팅을 의뢰했습니다. 까다로운 심사 기준과 복잡한 절차에도 불구하고, 전문적인 가이드와 철저한 준비 덕분에 우수제품으로 지정받을 수 있었습니다. 이후 공공 조달 매출이 3배 이상 증가했습니다.&quot;
             </p>
             <div className="text-blue-700 font-medium">
               • 우수조달 제품 지정 및 공공시장 확대

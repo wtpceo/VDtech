@@ -49,9 +49,9 @@ function FeatureCards() {
 
   return (
     <div className="grid md:grid-cols-3 gap-8">
-      {features.map((feature, index) => (
+      {features.map((feature) => (
         <FeatureCard 
-          key={index}
+          key={feature.title}
           icon={feature.icon}
           title={feature.title}
           description={feature.description}

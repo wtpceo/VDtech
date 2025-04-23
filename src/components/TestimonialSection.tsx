@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 export default function TestimonialSection() {
   return (
     <section className="py-20 bg-gray-50">
@@ -25,7 +23,7 @@ export default function TestimonialSection() {
               </div>
             </div>
             <p className="text-gray-700 mb-4">
-              "VD-Tech의 도움으로 GS인증을 성공적으로 취득했습니다. 처음부터 끝까지 체계적인 프로세스와 전문적인 조언 덕분에 어려운 인증 과정을 수월하게 통과할 수 있었습니다. 인증 취득 후 공공기관 납품 실적이 50% 이상 증가했습니다."
+              &quot;VD-Tech의 도움으로 GS인증을 성공적으로 취득했습니다. 처음부터 끝까지 체계적인 프로세스와 전문적인 조언 덕분에 어려운 인증 과정을 수월하게 통과할 수 있었습니다. 인증 취득 후 공공기관 납품 실적이 50% 이상 증가했습니다.&quot;
             </p>
             <div className="flex items-center">
               <div className="flex">
@@ -52,7 +50,7 @@ export default function TestimonialSection() {
               </div>
             </div>
             <p className="text-gray-700 mb-4">
-              "특허 출원 과정에서 VD-Tech의 전문가들이 큰 도움을 주셨습니다. 기술적 내용을 명확하게 정리하고 특허 명세서를 작성하는 과정에서 세심한 조언과 방향성을 제시해주셔서 최종적으로 3건의 특허를 성공적으로 등록할 수 있었습니다."
+              &quot;특허 출원 과정에서 VD-Tech의 전문가들이 큰 도움을 주셨습니다. 기술적 내용을 명확하게 정리하고 특허 명세서를 작성하는 과정에서 세심한 조언과 방향성을 제시해주셔서 최종적으로 3건의 특허를 성공적으로 등록할 수 있었습니다.&quot;
             </p>
             <div className="flex items-center">
               <div className="flex">
@@ -79,7 +77,7 @@ export default function TestimonialSection() {
               </div>
             </div>
             <p className="text-gray-700 mb-4">
-              "조달청 등록 및 우수조달제품 지정을 위한 컨설팅을 받았습니다. 복잡한 서류 준비부터 심사 대응까지 모든 과정에서 VD-Tech의 전문성이 빛났습니다. 덕분에 정부 사업 입찰 기회가 크게 확대되었고, 매출이 두 배 이상 증가했습니다."
+              &quot;조달청 등록 및 우수조달제품 지정을 위한 컨설팅을 받았습니다. 복잡한 서류 준비부터 심사 대응까지 모든 과정에서 VD-Tech의 전문성이 빛났습니다. 덕분에 정부 사업 입찰 기회가 크게 확대되었고, 매출이 두 배 이상 증가했습니다.&quot;
             </p>
             <div className="flex items-center">
               <div className="flex">
@@ -106,7 +104,7 @@ export default function TestimonialSection() {
               </div>
             </div>
             <p className="text-gray-700 mb-4">
-              "R&D 과제 수주를 위해 VD-Tech와 함께 했습니다. 사업계획서 작성부터 발표 자료 준비까지 모든 단계에서 탁월한 지원을 받았고, 결과적으로 3억 규모의 정부지원 R&D 과제를 성공적으로 수주할 수 있었습니다."
+              &quot;R&D 과제 수주를 위해 VD-Tech와 함께 했습니다. 사업계획서 작성부터 발표 자료 준비까지 모든 단계에서 탁월한 지원을 받았고, 결과적으로 3억 규모의 정부지원 R&D 과제를 성공적으로 수주할 수 있었습니다.&quot;
             </p>
             <div className="flex items-center">
               <div className="flex">
@@ -133,7 +131,7 @@ export default function TestimonialSection() {
               </div>
             </div>
             <p className="text-gray-700 mb-4">
-              "NET 인증 취득을 위해 1년간 VD-Tech와 협업했습니다. 기술 검증 및 시험 단계에서 발생한 여러 문제점들을 VD-Tech 컨설턴트의 도움으로 모두 해결할 수 있었고, 마침내 신기술 인증을 받게 되었습니다."
+              &quot;NET 인증 취득을 위해 1년간 VD-Tech와 협업했습니다. 기술 검증 및 시험 단계에서 발생한 여러 문제점들을 VD-Tech 컨설턴트의 도움으로 모두 해결할 수 있었고, 마침내 신기술 인증을 받게 되었습니다.&quot;
             </p>
             <div className="flex items-center">
               <div className="flex">
@@ -160,7 +158,7 @@ export default function TestimonialSection() {
               </div>
             </div>
             <p className="text-gray-700 mb-4">
-              "조달 경험이 전혀 없는 상태에서 VD-Tech를 만나 처음부터 조달시장 진입 전략을 수립했습니다. 제품 경쟁력 분석부터 인증 취득, 조달 등록까지 모든 과정을 함께했고, 지금은 안정적인 공공기관 거래처를 확보했습니다."
+              &quot;조달 경험이 전혀 없는 상태에서 VD-Tech를 만나 처음부터 조달시장 진입 전략을 수립했습니다. 제품 경쟁력 분석부터 인증 취득, 조달 등록까지 모든 과정을 함께했고, 지금은 안정적인 공공기관 거래처를 확보했습니다.&quot;
             </p>
             <div className="flex items-center">
               <div className="flex">
