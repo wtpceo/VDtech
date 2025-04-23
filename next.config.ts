@@ -1,13 +1,11 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  output: 'export',
-  trailingSlash: false,
-  distDir: 'out',
+  trailingSlash: true,
   images: {
-    unoptimized: true
-  },
-  basePath: ''
+    unoptimized: true,
+    domains: ['vdtech.vercel.app']
+  }
 };
 
 export default nextConfig;
