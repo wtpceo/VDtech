@@ -77,39 +77,38 @@ export default function TeamSection() {
         </div>
 
         <div className="mt-16 bg-white p-10 rounded-xl shadow-md">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
-            <div className="relative h-[300px]">
-              <Image
-                src="/teamwork-illustration.svg"
-                alt="다분야 전문가 협업을 통해 맞춤형 전략을 설계하는 모습"
-                fill
-                className="object-contain rounded-lg"
-              />
-            </div>
-            <div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                최적의 솔루션을 위한<br />다양한 전문가 협업
-              </h3>
-              <p className="text-gray-600 mb-6">
-                VD-Tech는 특허 전문가, 조달청 경력자, 기술거래사, 변리사 등 각 분야 전문가들의
-                협업을 통해 고객사의 제품과 기술이 최대한의 가치를 인정받을 수 있도록 지원합니다.
-                산업별 특성을 고려한 맞춤형 컨설팅으로 최상의 결과를 도출합니다.
-              </p>
-              <div className="flex flex-wrap gap-6">
-                <div className="bg-blue-50 px-6 py-4 rounded-lg">
-                  <p className="text-3xl font-bold text-blue-700">150+</p>
-                  <p className="text-gray-600">성공 사례</p>
-                </div>
-                <div className="bg-blue-50 px-6 py-4 rounded-lg">
-                  <p className="text-3xl font-bold text-blue-700">15년+</p>
-                  <p className="text-gray-600">업계 경력</p>
-                </div>
-                <div className="bg-blue-50 px-6 py-4 rounded-lg">
-                  <p className="text-3xl font-bold text-blue-700">95%</p>
-                  <p className="text-gray-600">성공률</p>
-                </div>
+          <div className="text-center max-w-3xl mx-auto">
+            <h3 className="text-3xl font-bold text-[#1A2B5C] mb-6">
+              최적의 솔루션을 위한<br />다양한 전문가 협업
+            </h3>
+            <p className="text-gray-600 mb-6 text-lg">
+              VD-Tech는 특허 전문가, 조달청 경력자, 기술거래사, 변리사 등 각 분야 전문가들의
+              협업을 통해 고객사의 제품과 기술이 최대한의 가치를 인정받을 수 있도록 지원합니다.
+              산업별 특성을 고려한 맞춤형 컨설팅으로 최상의 결과를 도출합니다.
+            </p>
+            
+            {/* 전문성 강조 카드 섹션 */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+              <div className="bg-[#1A2B5C]/5 p-6 rounded-lg border border-[#1A2B5C]/10">
+                <h4 className="text-xl font-bold text-[#1A2B5C] mb-3">전략적 접근</h4>
+                <p className="text-gray-700">
+                  인증 요건을 분석하고 기업의 핵심 기술을 식별하여 인증과 특허를 효과적으로 연계하는 전략을 수립합니다.
+                </p>
+              </div>
+              <div className="bg-[#1A2B5C]/5 p-6 rounded-lg border border-[#1A2B5C]/10">
+                <h4 className="text-xl font-bold text-[#1A2B5C] mb-3">맞춤형 솔루션</h4>
+                <p className="text-gray-700">
+                  기업 규모, 산업 분야, 기술 성숙도에 따라 최적화된 맞춤형 전략과 솔루션을 제공합니다.
+                </p>
               </div>
             </div>
+            
+            <a 
+              href="/contact" 
+              className="inline-block bg-[#FFD95A] hover:bg-[#1A2B5C] text-[#1A2B5C] hover:text-white py-3 px-8 rounded-lg transition duration-300 font-semibold shadow-md"
+            >
+              무료 상담 신청하기
+            </a>
           </div>
         </div>
       </div>

@@ -19,35 +19,46 @@ export default function About() {
       <div className="container mx-auto px-6 py-16">
         {/* VD-Tech 소개 섹션 */}
         <section className="mb-32 relative">
+          {/* 장식 요소 */}
           <div className="absolute top-0 left-0 w-6 h-16 bg-[#00B686]"></div>
-          <div className="flex flex-col md:flex-row items-center gap-12 mb-8 pl-0 md:pl-4">
-            <div className="w-full md:w-1/2 relative h-[450px] rounded-xl overflow-hidden shadow-xl transform transition-all duration-300 hover:scale-[1.02]">
-              <Image
-                src="/about-hero.svg"
-                alt="VD-Tech 전문가 팀"
-                fill
-                className="object-cover"
-              />
+          <div className="absolute -top-12 -right-12 w-64 h-64 bg-blue-100 rounded-full opacity-30"></div>
+          <div className="absolute -bottom-12 -left-12 w-64 h-64 bg-[#FFD95A]/20 rounded-full opacity-30"></div>
+          
+          <div className="max-w-3xl mx-auto text-center py-8 relative z-10">
+            <div className="mb-4 inline-block px-4 py-1 bg-[#1A2B5C]/10 text-[#1A2B5C] rounded-full text-sm font-semibold">
+              VD-TECH 소개
             </div>
-            <div className="w-full md:w-1/2">
-              <div className="mb-4 inline-block px-4 py-1 bg-[#1A2B5C]/10 text-[#1A2B5C] rounded-full text-sm font-semibold">
-                VD-TECH 소개
+            <h2 className="text-3xl md:text-5xl font-bold mb-8 text-[#1A2B5C]">정부조달 인증 및<br />특허 전략 전문 기업</h2>
+            <p className="text-lg mb-6 text-gray-700 leading-relaxed">
+              VD-Tech는 정부조달 인증과 기술 특허 전략을 통합하여, 공공시장 진입을 위한 전문 컨설팅을 제공하는 기술 전략 파트너입니다. 녹색기술, 성능인증, 우수조달제품 지정 등 다양한 인증 경험과 기술 포지셔닝 특허 전략을 바탕으로 고객의 기술이 시장에서 인정받을 수 있도록 지원합니다.
+            </p>
+            <p className="text-lg text-gray-700 leading-relaxed mb-10">
+              우리는 기술을 통해 고객의 지속 가능한 성장을 이끌고, 조달 등록까지 원스톱으로 함께하는 파트너십을 지향합니다.
+            </p>
+            
+            {/* 주요 수치 표시 */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 bg-white p-8 rounded-xl shadow-lg mb-10">
+              <div className="text-center">
+                <div className="text-4xl font-bold text-[#1A2B5C] mb-2">15년+</div>
+                <p className="text-gray-600">컨설팅 경험</p>
               </div>
-              <h2 className="text-3xl md:text-4xl font-bold mb-6 text-[#1A2B5C]">정부조달 인증 및<br />특허 전략 전문 기업</h2>
-              <p className="text-lg mb-6 text-gray-700 leading-relaxed">
-                VD-Tech는 정부조달 인증과 기술 특허 전략을 통합하여, 공공시장 진입을 위한 전문 컨설팅을 제공하는 기술 전략 파트너입니다. 녹색기술, 성능인증, 우수조달제품 지정 등 다양한 인증 경험과 기술 포지셔닝 특허 전략을 바탕으로 고객의 기술이 시장에서 인정받을 수 있도록 지원합니다.
-              </p>
-              <p className="text-lg text-gray-700 leading-relaxed">
-                우리는 기술을 통해 고객의 지속 가능한 성장을 이끌고, 조달 등록까지 원스톱으로 함께하는 파트너십을 지향합니다.
-              </p>
-              <div className="mt-8">
-                <a href="/contact" className="inline-flex items-center gap-2 px-6 py-3 bg-[#FFD95A] text-[#1A2B5C] font-semibold rounded-lg transition-all hover:bg-[#1A2B5C] hover:text-white shadow-md">
-                  무료 상담 신청
-                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
-                  </svg>
-                </a>
+              <div className="text-center">
+                <div className="text-4xl font-bold text-[#00B686] mb-2">150+</div>
+                <p className="text-gray-600">인증 성공 사례</p>
               </div>
+              <div className="text-center">
+                <div className="text-4xl font-bold text-[#FFD95A] mb-2">98%</div>
+                <p className="text-gray-600">인증 통과율</p>
+              </div>
+            </div>
+            
+            <div className="mt-8">
+              <a href="/contact" className="inline-flex items-center gap-2 px-6 py-3 bg-[#FFD95A] text-[#1A2B5C] font-semibold rounded-lg transition-all hover:bg-[#1A2B5C] hover:text-white shadow-md">
+                무료 상담 신청
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                </svg>
+              </a>
             </div>
           </div>
         </section>

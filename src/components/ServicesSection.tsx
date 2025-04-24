@@ -120,38 +120,45 @@ export default function ServicesSection() {
         </AnimatedSection>
 
         <AnimatedSection animation="slideUp" delay={0.3} className="mt-20 bg-[#F8F9FA] p-10 rounded-xl shadow-md">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
-            <div>
-              <h3 className="text-2xl font-bold text-[#1A2B5C] mb-4">
-                조달·인증·특허를<br />하나의 전략으로
-              </h3>
-              <p className="text-gray-600 mb-6">
-                VD-Tech는 정부조달 인증과 특허 전략을 유기적으로 연결하여
-                기업의 공공시장 경쟁력을 극대화합니다.
-                단순 인증 획득이 아닌, 특허와 연계된 강력한 시장 지위를 확보하도록
-                지원합니다.
-              </p>
-              <motion.div
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.98 }}
-                className="inline-block"
-              >
-                <Link
-                  href="/contact"
-                  className="inline-block bg-[#FFD95A] hover:bg-[#1A2B5C] text-[#1A2B5C] hover:text-white py-3 px-8 rounded-lg transition duration-300 border border-[#FFD95A]"
-                >
-                  무료 상담 신청하기
-                </Link>
-              </motion.div>
+          <div className="text-center max-w-3xl mx-auto">
+            <h3 className="text-3xl font-bold text-[#1A2B5C] mb-6">
+              조달·인증·특허를<br />하나의 전략으로
+            </h3>
+            <p className="text-gray-600 mb-8 text-lg">
+              VD-Tech는 정부조달 인증과 특허 전략을 유기적으로 연결하여
+              기업의 공공시장 경쟁력을 극대화합니다.
+              단순 인증 획득이 아닌, 특허와 연계된 강력한 시장 지위를 확보하도록
+              지원합니다.
+            </p>
+            
+            {/* 수치 강조 섹션 */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+              <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+                <div className="text-[#FFD95A] text-4xl font-bold mb-2">150+</div>
+                <p className="text-gray-700">인증 성공 사례</p>
+              </div>
+              <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+                <div className="text-[#1A2B5C] text-4xl font-bold mb-2">98%</div>
+                <p className="text-gray-700">인증 통과율</p>
+              </div>
+              <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+                <div className="text-blue-500 text-4xl font-bold mb-2">15년+</div>
+                <p className="text-gray-700">컨설팅 노하우</p>
+              </div>
             </div>
-            <AnimatedSection animation="fadeIn" delay={0.5} className="relative h-[300px]">
-              <Image
-                src="/consulting-illustration.svg"
-                alt="맞춤형 컨설팅 전략 설명"
-                fill
-                className="object-contain rounded-lg"
-              />
-            </AnimatedSection>
+            
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.98 }}
+              className="inline-block"
+            >
+              <Link
+                href="/contact"
+                className="inline-block bg-[#FFD95A] hover:bg-[#1A2B5C] text-[#1A2B5C] hover:text-white py-3 px-8 rounded-lg transition duration-300 border border-[#FFD95A]"
+              >
+                무료 상담 신청하기
+              </Link>
+            </motion.div>
           </div>
         </AnimatedSection>
       </div>

@@ -42,9 +42,9 @@ export default function HeroSection() {
       </div>
 
       <div className="container mx-auto px-4 z-10 pt-10">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
-          <AnimatedSection animation="slideLeft" delay={0.3} className="text-white text-left">
-            <AnimatedItem animation="slideLeft" delay={0.4}>
+        <div className="flex flex-col items-center justify-center text-center mb-16 max-w-3xl mx-auto">
+          <AnimatedSection animation="fadeIn" delay={0.3} className="text-white">
+            <AnimatedItem animation="fadeIn" delay={0.4}>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-8 leading-tight">
                 <span className="text-[#FFD95A] font-bold block mb-3">기술은 인증으로,</span>
                 <span className="font-bold text-white block mb-3">인증은 특허로,</span>
@@ -53,14 +53,14 @@ export default function HeroSection() {
               </h1>
             </AnimatedItem>
             
-            <AnimatedItem animation="slideLeft" delay={0.6}>
-              <p className="text-xl md:text-2xl mb-10 text-blue-100 max-w-2xl">
+            <AnimatedItem animation="fadeIn" delay={0.6}>
+              <p className="text-xl md:text-2xl mb-10 text-blue-100 mx-auto">
                 정부조달 인증과 기술 특허를 하나의 전략으로 묶어,<br className="hidden md:block" />
                 귀사의 혁신 제품을 공공시장 주력 상품으로 육성합니다.
               </p>
             </AnimatedItem>
             
-            <AnimatedItem animation="fadeIn" delay={0.8} className="flex flex-col sm:flex-row gap-6">
+            <AnimatedItem animation="fadeIn" delay={0.8} className="flex flex-col sm:flex-row gap-6 justify-center">
               <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.98 }}>
                 <Link
                   href="/contact"
@@ -79,24 +79,6 @@ export default function HeroSection() {
                 </Link>
               </motion.div>
             </AnimatedItem>
-          </AnimatedSection>
-
-          <AnimatedSection animation="fadeIn" delay={0.5} className="hidden lg:block relative">
-            <div className="relative h-[550px] w-full">
-              <div className="absolute -top-8 -left-8 w-full h-full bg-gradient-to-tr from-blue-500/10 to-transparent rounded-xl"></div>
-              <div className="absolute -bottom-8 -right-8 w-full h-full bg-gradient-to-bl from-[#FFD95A]/10 to-transparent rounded-xl"></div>
-              <div className="relative w-full h-full bg-gradient-to-br from-[#1A2B5C]/50 to-blue-900/50 rounded-xl p-8 backdrop-blur-sm flex items-center justify-center overflow-hidden border border-white/10 shadow-lg shadow-blue-900/20">
-                <div className="relative w-full h-full">
-                  <Image
-                    src="/hero-strategy.svg"
-                    alt="기술 인증과 특허 전략을 통한 조달시장 진입 흐름도"
-                    fill
-                    className="object-contain p-2"
-                    priority
-                  />
-                </div>
-              </div>
-            </div>
           </AnimatedSection>
         </div>
 
