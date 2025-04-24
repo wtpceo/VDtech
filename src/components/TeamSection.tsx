@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 const expertGroups = [
   {
     id: 1,
