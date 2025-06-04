@@ -89,20 +89,25 @@ export default function Footer() {
             <h3 className="text-lg font-bold mb-6 border-b border-blue-800 pb-2 text-[#FFD95A]">연락처</h3>
             <ul className="space-y-3 text-blue-100">
               <li>
-                <strong className="block text-white">주소:</strong>
-                서울특별시 강남구 테헤란로 123, 7층
+                <strong className="block text-white">오시는 길:</strong>
+                경기도 이천시 신둔면 원적로 147번길 34
               </li>
               <li>
-                <strong className="block text-white">전화:</strong>
-                02-1234-5678
+                <strong className="block text-white">전화 문의:</strong>
+                031-631-6191
               </li>
               <li>
-                <strong className="block text-white">이메일:</strong>
-                info@vdtech.kr
+                <strong className="block text-white">팩스:</strong>
+                031-631-6192
               </li>
               <li>
-                <strong className="block text-white">업무시간:</strong>
-                평일 09:00 - 18:00
+                <strong className="block text-white">이메일 문의:</strong>
+                eddie00700@naver.com
+              </li>
+              <li>
+                <strong className="block text-white">업무 시간:</strong>
+                평일: 09:00 - 18:00<br />
+                점심시간: 12:00 - 13:00
               </li>
             </ul>
           </div>

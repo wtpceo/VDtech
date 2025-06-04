@@ -11,15 +11,19 @@ export default function Contact() {
           <div className="space-y-6">
             <div>
               <h3 className="font-bold mb-2">주소</h3>
-              <p>서울특별시 강남구 테헤란로 123, VD-Tech 빌딩 8층</p>
+              <p>경기도 이천시 신둔면 원적로 147번길 34</p>
             </div>
             <div>
               <h3 className="font-bold mb-2">이메일</h3>
-              <p>info@vdtech.com</p>
+              <p>eddie00700@naver.com</p>
             </div>
             <div>
               <h3 className="font-bold mb-2">전화번호</h3>
-              <p>02-123-4567</p>
+              <p>031-631-6191</p>
+            </div>
+            <div>
+              <h3 className="font-bold mb-2">팩스번호</h3>
+              <p>031-631-6192</p>
             </div>
             <div>
               <h3 className="font-bold mb-2">운영 시간</h3>

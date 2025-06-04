@@ -199,72 +199,63 @@ export default function ContactSection() {
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
             무료 <span className="text-blue-700">상담 신청</span>
           </h2>
-          <p className="text-gray-600 max-w-3xl mx-auto">
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             정부조달 인증 및 특허 관련 궁금한 점이 있으시거나 컨설팅이 필요하신가요?
             전문 컨설턴트가 기업에 맞는 최적의 솔루션을 제안해 드립니다.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          <ConsultRequest />
-
+        <div className="grid md:grid-cols-2 gap-12 items-start">
           <div>
-            <div className="bg-blue-700 text-white p-8 rounded-xl shadow-md mb-8">
-              <h3 className="text-2xl font-bold mb-6">문의 안내</h3>
-              <ul className="space-y-6">
-                <li className="flex items-start">
-                  <FiPhone className="w-6 h-6 mr-4 mt-1" />
-                  <div>
-                    <h4 className="font-bold">전화 문의</h4>
-                    <p className="text-blue-100">02-1234-5678</p>
-                    <p className="text-sm text-blue-200">평일 09:00 - 18:00</p>
-                  </div>
-                </li>
-                <li className="flex items-start">
-                  <FiMail className="w-6 h-6 mr-4 mt-1" />
-                  <div>
-                    <h4 className="font-bold">이메일 문의</h4>
-                    <p className="text-blue-100">info@vdtech.kr</p>
-                    <p className="text-sm text-blue-200">24시간 접수 가능</p>
-                  </div>
-                </li>
-                <li className="flex items-start">
-                  <FiMapPin className="w-6 h-6 mr-4 mt-1" />
-                  <div>
-                    <h4 className="font-bold">오시는 길</h4>
-                    <p className="text-blue-100">서울특별시 강남구 테헤란로 123, 7층</p>
-                    <p className="text-sm text-blue-200">강남역 3번 출구에서 도보 5분</p>
-                  </div>
-                </li>
-                <li className="flex items-start">
-                  <FiClock className="w-6 h-6 mr-4 mt-1" />
-                  <div>
-                    <h4 className="font-bold">업무 시간</h4>
-                    <p className="text-blue-100">평일: 09:00 - 18:00</p>
-                    <p className="text-sm text-blue-200">점심시간: 12:00 - 13:00</p>
-                  </div>
-                </li>
-              </ul>
-            </div>
-
             <div className="bg-white p-8 rounded-xl shadow-md">
-              <h3 className="text-xl font-bold text-gray-900 mb-4">자주 묻는 질문</h3>
-              <ul className="space-y-4">
-                <li>
-                  <h4 className="font-bold text-blue-700">Q. 정부조달 등록은 얼마나 걸리나요?</h4>
-                  <p className="text-gray-600 mt-1">일반적으로 3-4주 정도 소요되며, 기업의 준비 상태에 따라 달라질 수 있습니다.</p>
-                </li>
-                <li>
-                  <h4 className="font-bold text-blue-700">Q. 특허 출원 비용은 어떻게 되나요?</h4>
-                  <p className="text-gray-600 mt-1">기술 분야와 내용에 따라 다르므로, 무료 상담을 통해 정확한 견적을 안내해 드립니다.</p>
-                </li>
-                <li>
-                  <h4 className="font-bold text-blue-700">Q. 상담은 어떻게 진행되나요?</h4>
-                  <p className="text-gray-600 mt-1">방문 상담, 화상 회의, 전화 상담 중 선택하실 수 있으며, 기업 상황에 맞게 맞춤형으로 진행됩니다.</p>
-                </li>
-              </ul>
+              <h3 className="text-2xl font-bold mb-6">문의 안내</h3>
+              <div className="space-y-6">
+                <div className="flex items-start">
+                  <div className="text-blue-700 mt-1">
+                    <FiMapPin className="w-6 h-6" />
+                  </div>
+                  <div className="ml-4">
+                    <h4 className="font-semibold mb-1">오시는 길</h4>
+                    <p className="text-gray-600">경기도 이천시 신둔면 원적로 147번길 34</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start">
+                  <div className="text-blue-700 mt-1">
+                    <FiPhone className="w-6 h-6" />
+                  </div>
+                  <div className="ml-4">
+                    <h4 className="font-semibold mb-1">전화 문의</h4>
+                    <p className="text-gray-600">031-631-6191</p>
+                    <p className="text-gray-600">팩스: 031-631-6192</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start">
+                  <div className="text-blue-700 mt-1">
+                    <FiMail className="w-6 h-6" />
+                  </div>
+                  <div className="ml-4">
+                    <h4 className="font-semibold mb-1">이메일 문의</h4>
+                    <p className="text-gray-600">eddie00700@naver.com</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start">
+                  <div className="text-blue-700 mt-1">
+                    <FiClock className="w-6 h-6" />
+                  </div>
+                  <div className="ml-4">
+                    <h4 className="font-semibold mb-1">업무 시간</h4>
+                    <p className="text-gray-600">평일: 09:00 - 18:00</p>
+                    <p className="text-gray-600">점심시간: 12:00 - 13:00</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
+
+          <ConsultRequest />
         </div>
       </div>
     </section>
