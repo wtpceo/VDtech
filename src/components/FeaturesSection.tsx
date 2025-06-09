@@ -1,3 +1,5 @@
+import { CheckIcon } from "./icons/CommonIcons";
+
 export default function FeaturesSection() {
   return (
     <section className="py-20 bg-white">
@@ -56,21 +58,15 @@ export default function FeaturesSection() {
             </p>
             <ul className="space-y-2 text-gray-600">
               <li className="flex items-start">
-                <svg className="w-5 h-5 text-green-500 mr-2 mt-1" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
-                </svg>
+                <CheckIcon className="text-green-500 mr-2 mt-1" />
                 <span>GS인증 (굿소프트웨어 인증)</span>
               </li>
               <li className="flex items-start">
-                <svg className="w-5 h-5 text-green-500 mr-2 mt-1" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
-                </svg>
+                <CheckIcon className="text-green-500 mr-2 mt-1" />
                 <span>NEP/NET (신제품/신기술 인증)</span>
               </li>
               <li className="flex items-start">
-                <svg className="w-5 h-5 text-green-500 mr-2 mt-1" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
-                </svg>
+                <CheckIcon className="text-green-500 mr-2 mt-1" />
                 <span>조달 우수제품 지정</span>
               </li>
             </ul>
@@ -120,21 +116,15 @@ export default function FeaturesSection() {
             </p>
             <ul className="space-y-2 text-gray-600">
               <li className="flex items-start">
-                <svg className="w-5 h-5 text-green-500 mr-2 mt-1" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
-                </svg>
+                <CheckIcon className="text-green-500 mr-2 mt-1" />
                 <span>정부지원사업 모니터링 및 분석</span>
               </li>
               <li className="flex items-start">
-                <svg className="w-5 h-5 text-green-500 mr-2 mt-1" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
-                </svg>
+                <CheckIcon className="text-green-500 mr-2 mt-1" />
                 <span>R&D 과제 기획 및 제안서 작성</span>
               </li>
               <li className="flex items-start">
-                <svg className="w-5 h-5 text-green-500 mr-2 mt-1" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
-                </svg>
+                <CheckIcon className="text-green-500 mr-2 mt-1" />
                 <span>기술개발 로드맵 수립</span>
               </li>
             </ul>
@@ -143,7 +133,7 @@ export default function FeaturesSection() {
           <div className="bg-white p-8 rounded-lg shadow-lg transition-transform duration-300 hover:-translate-y-2">
             <div className="w-14 h-14 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
               <svg className="w-8 h-8 text-blue-700" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clipRule="evenodd"></path>
+                <path d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clipRule="evenodd"></path>
               </svg>
             </div>
             <h3 className="text-xl font-bold mb-4">조달시장 진입 전략</h3>
@@ -152,21 +142,15 @@ export default function FeaturesSection() {
             </p>
             <ul className="space-y-2 text-gray-600">
               <li className="flex items-start">
-                <svg className="w-5 h-5 text-green-500 mr-2 mt-1" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
-                </svg>
+                <CheckIcon className="text-green-500 mr-2 mt-1" />
                 <span>조달시장 동향 분석</span>
               </li>
               <li className="flex items-start">
-                <svg className="w-5 h-5 text-green-500 mr-2 mt-1" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
-                </svg>
+                <CheckIcon className="text-green-500 mr-2 mt-1" />
                 <span>경쟁사 현황 및 제품 분석</span>
               </li>
               <li className="flex items-start">
-                <svg className="w-5 h-5 text-green-500 mr-2 mt-1" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
-                </svg>
+                <CheckIcon className="text-green-500 mr-2 mt-1" />
                 <span>맞춤형 조달 제품 개발 전략</span>
               </li>
             </ul>

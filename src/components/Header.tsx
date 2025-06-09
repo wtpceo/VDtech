@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -13,14 +14,17 @@ export default function Header() {
   return (
     <header className="bg-white shadow-md z-50 sticky top-0">
       <div className="container mx-auto px-4">
-        <div className="flex justify-between items-center h-20">
+        <div className="flex justify-between items-center h-24">
           <Link href="/" className="flex items-center">
-            <div className="relative w-40 h-10">
-              <div className="absolute inset-0 flex items-center">
-                {/* 로고 이미지가 준비되면 아래 주석을 해제하고 사용하세요 */}
-                {/* <Image src="/images/logo.svg" alt="VD-Tech 로고" fill /> */}
-                <span className="text-2xl font-bold text-[#1A2B5C]">VD<span className="text-[#FFD95A]">-</span>Tech</span>
-              </div>
+            <div className="relative w-[200px] h-[50px]">
+              <Image 
+                src="/vdtech-logo.svg" 
+                alt="VD-Tech 로고" 
+                fill 
+                priority
+                className="object-contain"
+                sizes="200px"
+              />
             </div>
           </Link>
 

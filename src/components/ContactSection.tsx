@@ -239,7 +239,7 @@ export default function ContactSection() {
                     <h4 className="font-semibold mb-1">이메일 문의</h4>
                     <p className="text-gray-600">eddie00700@naver.com</p>
                   </div>
-                </div>
+            </div>
 
                 <div className="flex items-start">
                   <div className="text-blue-700 mt-1">

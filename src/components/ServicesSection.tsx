@@ -3,6 +3,7 @@
 import Link from "next/link";
 import AnimatedSection, { AnimatedItem } from "./AnimatedSection";
 import { motion } from "framer-motion";
+import { GreenTechIcon, PerformanceIcon, CertificationIcon } from "./icons/CommonIcons";
 
 const services = [
   {
@@ -10,33 +11,21 @@ const services = [
     title: "녹색기술인증 + 특허 전략",
     description:
       "친환경 기술성 및 에너지 효율성 기반의 고난이도 인증. 온실가스 감축·탄소저감 기술 특허화, 실증자료 설계 및 시험기관 연계 제공.",
-    icon: (
-      <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
-      </svg>
-    ),
+    icon: <GreenTechIcon />,
   },
   {
     id: 2,
     title: "성능인증 + 특허 전략",
     description:
       "기술의 성능을 실증 평가로 입증하며, 우수조달의 필수 요건. 핵심 알고리즘 특허화 및 시험 기준 설계부터 인증 문서까지 지원.",
-    icon: (
-      <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-      </svg>
-    ),
+    icon: <PerformanceIcon />,
   },
   {
     id: 3,
     title: "우수조달제품 지정 + 특허 전략",
     description:
       "조달청이 검증한 제품으로, 수의계약·우선구매가 가능한 등 최대 혜택. 기술 혁신성 강조 특허 전략 + 독점 포지셔닝까지 마케팅 자료 구성 포함.",
-    icon: (
-      <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
-      </svg>
-    ),
+    icon: <CertificationIcon />,
   },
 ];
 
@@ -71,7 +60,7 @@ export default function ServicesSection() {
               >
                 <div className="p-6 flex flex-col flex-grow">
                   <AnimatedItem animation="slideDown" delay={0.2} className="mb-6 mx-auto">
-                    <div className="bg-[#1A2B5C]/10 text-[#1A2B5C] p-4 rounded-full w-16 h-16 flex items-center justify-center">
+                    <div className="bg-blue-100 text-[#1A2B5C] p-4 rounded-full w-16 h-16 flex items-center justify-center">
                       {service.icon}
                     </div>
                   </AnimatedItem>
