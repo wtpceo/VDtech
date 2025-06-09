@@ -18,12 +18,20 @@ export default function Header() {
           <Link href="/" className="flex items-center">
             <div className="relative w-[200px] h-[50px]">
               <Image 
-                src="/vdtech-logo.svg" 
+                src="/VDTECH-logo.svg" 
                 alt="VD-Tech 로고" 
                 fill 
                 priority
                 className="object-contain"
                 sizes="200px"
+                onError={(e) => {
+                  const target = e.target as HTMLImageElement;
+                  target.style.display = 'none';
+                  const parent = target.parentElement;
+                  if (parent) {
+                    parent.innerHTML = '<span class="text-2xl font-bold text-[#1A2B5C]">VD<span class="text-[#FFD95A]">-</span>Tech</span>';
+                  }
+                }}
               />
             </div>
           </Link>
