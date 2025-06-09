@@ -196,8 +196,8 @@ export default function ContactSection() {
     <section id="contact" className="py-20 bg-gray-50">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            무료 <span className="text-blue-700">상담 신청</span>
+          <h2 className="text-3xl md:text-4xl font-bold text-[#1A2B5C] mb-4">
+            무료 <span className="text-[#FFD95A]">상담 신청</span>
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             정부조달 인증 및 특허 관련 궁금한 점이 있으시거나 컨설팅이 필요하신가요?
@@ -208,45 +208,45 @@ export default function ContactSection() {
         <div className="grid md:grid-cols-2 gap-12 items-start">
           <div>
             <div className="bg-white p-8 rounded-xl shadow-md">
-              <h3 className="text-2xl font-bold mb-6">문의 안내</h3>
+              <h3 className="text-2xl font-bold text-[#1A2B5C] mb-6">문의 안내</h3>
               <div className="space-y-6">
                 <div className="flex items-start">
-                  <div className="text-blue-700 mt-1">
+                  <div className="text-[#FFD95A]">
                     <FiMapPin className="w-6 h-6" />
                   </div>
                   <div className="ml-4">
-                    <h4 className="font-semibold mb-1">오시는 길</h4>
+                    <h4 className="text-[#1A2B5C] font-semibold mb-1">오시는 길</h4>
                     <p className="text-gray-600">경기도 이천시 신둔면 원적로 147번길 34</p>
                   </div>
                 </div>
 
                 <div className="flex items-start">
-                  <div className="text-blue-700 mt-1">
+                  <div className="text-[#FFD95A]">
                     <FiPhone className="w-6 h-6" />
                   </div>
                   <div className="ml-4">
-                    <h4 className="font-semibold mb-1">전화 문의</h4>
+                    <h4 className="text-[#1A2B5C] font-semibold mb-1">전화 문의</h4>
                     <p className="text-gray-600">031-631-6191</p>
                     <p className="text-gray-600">팩스: 031-631-6192</p>
                   </div>
                 </div>
 
                 <div className="flex items-start">
-                  <div className="text-blue-700 mt-1">
+                  <div className="text-[#FFD95A]">
                     <FiMail className="w-6 h-6" />
                   </div>
                   <div className="ml-4">
-                    <h4 className="font-semibold mb-1">이메일 문의</h4>
+                    <h4 className="text-[#1A2B5C] font-semibold mb-1">이메일 문의</h4>
                     <p className="text-gray-600">eddie00700@naver.com</p>
                   </div>
-            </div>
+                </div>
 
                 <div className="flex items-start">
-                  <div className="text-blue-700 mt-1">
+                  <div className="text-[#FFD95A]">
                     <FiClock className="w-6 h-6" />
                   </div>
                   <div className="ml-4">
-                    <h4 className="font-semibold mb-1">업무 시간</h4>
+                    <h4 className="text-[#1A2B5C] font-semibold mb-1">업무 시간</h4>
                     <p className="text-gray-600">평일: 09:00 - 18:00</p>
                     <p className="text-gray-600">점심시간: 12:00 - 13:00</p>
                   </div>
