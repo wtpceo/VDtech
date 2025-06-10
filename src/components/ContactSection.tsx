@@ -6,186 +6,159 @@ import { ChangeEvent, FormEvent } from "react";
 
 // 상담 요청 폼 컴포넌트를 분리
 export function ConsultRequest() {
-  const [formData, setFormData] = useState({
-    name: "",
-    company: "",
-    email: "",
-    phone: "",
-    service: "",
-    message: "",
-  });
+  const [showModal, setShowModal] = useState(false);
 
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
-
-  const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({
-      ...prev,
-      [name]: value,
-    }));
-  };
-
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setIsSubmitting(true);
-    
-    // 여기에 실제 폼 제출 로직을 구현하세요
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setIsSubmitted(true);
-    }, 1500);
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+
+    try {
+      const response = await fetch("https://formsubmit.co/eddie00700@naver.com", {
+        method: "POST",
+        body: formData,
+      });
+
+      if (response.ok) {
+        setShowModal(true);
+        form.reset();
+        // 3초 후 모달 닫기
+        setTimeout(() => {
+          setShowModal(false);
+        }, 3000);
+      }
+    } catch (error) {
+      console.error("Form submission error:", error);
+    }
   };
 
   return (
-    <div className="bg-white p-8 rounded-xl shadow-md">
-      {isSubmitted ? (
-        <div className="text-center py-12">
-          <div className="text-green-500 text-5xl mb-4">
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-16 w-16 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-            </svg>
-          </div>
-          <h3 className="text-2xl font-bold mb-2">상담 신청이 완료되었습니다!</h3>
-          <p className="text-gray-600 mb-6">
-            담당 컨설턴트가 1영업일 이내에 연락드리겠습니다.
-          </p>
-          <button
-            className="text-blue-700 font-medium"
-            onClick={() => {
-              setIsSubmitted(false);
-              setFormData({
-                name: "",
-                company: "",
-                email: "",
-                phone: "",
-                service: "",
-                message: "",
-              });
-            }}
-          >
-            새로운 상담 신청하기
-          </button>
-        </div>
-      ) : (
-        <form onSubmit={handleSubmit}>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-            <div>
-              <label htmlFor="name" className="block text-gray-700 font-medium mb-2">
-                이름 *
-              </label>
-              <input
-                type="text"
-                id="name"
-                name="name"
-                value={formData.name}
-                onChange={handleChange}
-                required
-                className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-              />
-            </div>
-            <div>
-              <label htmlFor="company" className="block text-gray-700 font-medium mb-2">
-                회사명 *
-              </label>
-              <input
-                type="text"
-                id="company"
-                name="company"
-                value={formData.company}
-                onChange={handleChange}
-                required
-                className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-              />
-            </div>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-            <div>
-              <label htmlFor="email" className="block text-gray-700 font-medium mb-2">
-                이메일 *
-              </label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                value={formData.email}
-                onChange={handleChange}
-                required
-                className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-              />
-            </div>
-            <div>
-              <label htmlFor="phone" className="block text-gray-700 font-medium mb-2">
-                연락처 *
-              </label>
-              <input
-                type="tel"
-                id="phone"
-                name="phone"
-                value={formData.phone}
-                onChange={handleChange}
-                required
-                className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-              />
-            </div>
-          </div>
-
-          <div className="mb-6">
-            <label htmlFor="service" className="block text-gray-700 font-medium mb-2">
-              관심 서비스 *
-            </label>
-            <select
-              id="service"
-              name="service"
-              value={formData.service}
-              onChange={handleChange}
-              required
-              className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-            >
-              <option value="">선택해주세요</option>
-              <option value="procurement">조달청 등록 컨설팅</option>
-              <option value="excellent">우수조달 지정 컨설팅</option>
-              <option value="patent">특허 출원/전략 컨설팅</option>
-              <option value="rnd">R&D 과제기획 컨설팅</option>
-              <option value="other">기타</option>
-            </select>
-          </div>
-
-          <div className="mb-6">
-            <label htmlFor="message" className="block text-gray-700 font-medium mb-2">
-              문의 내용
-            </label>
-            <textarea
-              id="message"
-              name="message"
-              rows={5}
-              value={formData.message}
-              onChange={handleChange}
-              className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-              placeholder="궁금한 점이나 요청사항을 자유롭게 작성해주세요."
-            ></textarea>
-          </div>
-
-          <button
-            type="submit"
-            disabled={isSubmitting}
-            className="w-full bg-blue-700 hover:bg-blue-800 text-white font-bold py-3 px-4 rounded-lg transition duration-300 flex items-center justify-center"
-          >
-            {isSubmitting ? (
-              <>
-                <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                  <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
-                  <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+    <div className="bg-white p-8 rounded-xl shadow-md relative">
+      {/* 모달 */}
+      {showModal && (
+        <div className="fixed inset-0 flex items-center justify-center z-50">
+          <div className="absolute inset-0 bg-black opacity-50"></div>
+          <div className="bg-white p-8 rounded-lg shadow-xl z-10 max-w-md w-full mx-4">
+            <div className="text-center">
+              <div className="text-green-500 text-5xl mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-16 w-16 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                 </svg>
-                처리 중...
-              </>
-            ) : (
-              "무료 상담 신청하기"
-            )}
-          </button>
-        </form>
+              </div>
+              <h3 className="text-2xl font-bold mb-4 text-gray-900">문의 주셔서 감사합니다</h3>
+              <p className="text-gray-900 text-lg">최대한 빠른 시일내에 연락드리겠습니다.</p>
+            </div>
+          </div>
+        </div>
       )}
+
+      <form onSubmit={handleSubmit}>
+        {/* FormSubmit 설정 */}
+        <input type="hidden" name="_subject" value="VD-Tech 무료 상담 신청" />
+        <input type="hidden" name="_template" value="table" />
+        <input type="hidden" name="_captcha" value="false" />
+        
+        {/* Honeypot field */}
+        <input type="text" name="_honey" style={{ display: 'none' }} />
+        
+        {/* 실제 폼 필드들 */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+          <div>
+            <label htmlFor="name" className="block text-gray-700 font-medium mb-2">
+              이름 *
+            </label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              required
+              placeholder="홍길동"
+              className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-900 placeholder-gray-400"
+            />
+          </div>
+          <div>
+            <label htmlFor="company" className="block text-gray-700 font-medium mb-2">
+              회사명 *
+            </label>
+            <input
+              type="text"
+              id="company"
+              name="company"
+              required
+              placeholder="회사명을 입력해주세요"
+              className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-900 placeholder-gray-400"
+            />
+          </div>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+          <div>
+            <label htmlFor="email" className="block text-gray-700 font-medium mb-2">
+              이메일 *
+            </label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              placeholder="example@email.com"
+              className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-900 placeholder-gray-400"
+            />
+          </div>
+          <div>
+            <label htmlFor="phone" className="block text-gray-700 font-medium mb-2">
+              연락처 *
+            </label>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              required
+              placeholder="010-1234-5678"
+              className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-900 placeholder-gray-400"
+            />
+          </div>
+        </div>
+
+        <div className="mb-6">
+          <label htmlFor="service" className="block text-gray-700 font-medium mb-2">
+            관심 서비스 *
+          </label>
+          <select
+            id="service"
+            name="service"
+            required
+            className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-900"
+          >
+            <option value="" className="text-gray-400">선택해주세요</option>
+            <option value="procurement">조달청 등록 컨설팅</option>
+            <option value="excellent">우수조달 지정 컨설팅</option>
+            <option value="patent">특허 출원/전략 컨설팅</option>
+            <option value="rnd">R&D 과제기획 컨설팅</option>
+            <option value="other">기타</option>
+          </select>
+        </div>
+
+        <div className="mb-6">
+          <label htmlFor="message" className="block text-gray-700 font-medium mb-2">
+            문의 내용
+          </label>
+          <textarea
+            id="message"
+            name="message"
+            rows={5}
+            placeholder="궁금한 점이나 요청사항을 자유롭게 작성해주세요."
+            className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-900 placeholder-gray-400"
+          ></textarea>
+        </div>
+
+        <button
+          type="submit"
+          className="w-full bg-blue-700 hover:bg-blue-800 text-white font-bold py-3 px-4 rounded-lg transition duration-300"
+        >
+          무료 상담 신청하기
+        </button>
+      </form>
     </div>
   );
 }

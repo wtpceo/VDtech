@@ -65,7 +65,12 @@ export default function ContactForm() {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-6">
+    <form action="https://formsubmit.co/byulri7@naver.com" method="POST" className="space-y-6">
+      <input type="hidden" name="_subject" value="VD-Tech 웹사이트 문의" />
+      <input type="hidden" name="_template" value="table" />
+      <input type="hidden" name="_captcha" value="false" />
+      <input type="hidden" name="_next" value="https://vdtech.co.kr/thanks" />
+      
       <div className="grid md:grid-cols-2 gap-6">
         <div>
           <label htmlFor="name" className="block text-sm font-medium mb-1">이름 *</label>
@@ -76,7 +81,8 @@ export default function ContactForm() {
             required
             value={formData.name}
             onChange={handleChange}
-            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            placeholder="홍길동"
+            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-900 placeholder-gray-400"
           />
         </div>
         
@@ -89,7 +95,8 @@ export default function ContactForm() {
             required
             value={formData.email}
             onChange={handleChange}
-            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            placeholder="example@email.com"
+            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-900 placeholder-gray-400"
           />
         </div>
       </div>
@@ -103,7 +110,8 @@ export default function ContactForm() {
             name="phone"
             value={formData.phone}
             onChange={handleChange}
-            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            placeholder="010-1234-5678"
+            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-900 placeholder-gray-400"
           />
         </div>
         
@@ -115,7 +123,8 @@ export default function ContactForm() {
             name="company"
             value={formData.company}
             onChange={handleChange}
-            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            placeholder="회사명을 입력해주세요"
+            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-900 placeholder-gray-400"
           />
         </div>
       </div>
@@ -128,9 +137,9 @@ export default function ContactForm() {
           required
           value={formData.subject}
           onChange={handleChange}
-          className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-900"
         >
-          <option value="">문의 주제를 선택하세요</option>
+          <option value="" className="text-gray-400">문의 주제를 선택하세요</option>
           <option value="솔루션 개발">솔루션 개발</option>
           <option value="컨설팅">컨설팅</option>
           <option value="유지보수">유지보수</option>
@@ -148,19 +157,18 @@ export default function ContactForm() {
           required
           value={formData.message}
           onChange={handleChange}
-          className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+          placeholder="문의하실 내용을 자세히 작성해주세요"
+          className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-900 placeholder-gray-400"
         ></textarea>
       </div>
       
       <div className="flex flex-col items-center">
-        <Button
+        <button
           type="submit"
-          size="lg"
-          disabled={isSubmitting}
-          className="w-full max-w-md"
+          className="w-full max-w-md bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-md transition duration-300"
         >
-          {isSubmitting ? "제출 중..." : "문의하기"}
-        </Button>
+          문의하기
+        </button>
         
         {submitMessage.text && (
           <div 
